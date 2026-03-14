@@ -1,8 +1,40 @@
-#virtual env
+# -----------------------
+# Virtual Environment
+# -----------------------
 agenticblog/
+venv/
+env/
 
-# env files 
+# -----------------------
+# Environment Variables
+# -----------------------
 .env
 
-# document for reference of the team
+# -----------------------
+# Python Cache Files
+# -----------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# -----------------------
+# IDE Files
+# -----------------------
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# -----------------------
+# OS Files
+# -----------------------
+.DS_Store
+Thumbs.db
+
+# -----------------------
+# Project Internal Docs
+# -----------------------
 PROJECT_EXPLAINED.md
