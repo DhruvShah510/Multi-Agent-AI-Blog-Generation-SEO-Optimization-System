@@ -1,43 +1,43 @@
-# 🤖 LangGraph Blog Generator — Agentic AI Demo
+# 🤖 Multi-Agent AI Blog Generation & SEO Optimization System
 
-A **hands-on demonstration of Agentic AI** using [LangGraph](https://langchain-ai.github.io/langgraph/).
+A **LangGraph-based multi-agent AI system** that automatically generates structured blog content using a collaborative pipeline of specialized AI agents.
 
-This project shows how multiple AI agents can collaborate as a team, each handling a specialized task, with a shared state flowing through them — just like a real content production pipeline.
+This project demonstrates how **agentic AI architectures** can orchestrate multiple Large Language Model (LLM) agents to perform complex workflows such as **content planning, drafting, editing, and SEO optimization**.
 
----
-
-## 🧠 What Is Agentic AI?
-
-Traditional AI: You ask → AI answers → Done.
-
-**Agentic AI**: A *team* of specialized AI agents works together on a task:
-- Each agent has a specific role
-- They pass information to the next agent
-- The final output is the result of collaboration
-
-**Real-life analogy**: Like a blog publishing team:
-| Person | Role |
-|--------|------|
-| Senior Editor | Plans the structure |
-| Journalist | Writes the content |
-| Copy Editor | Polishes the text |
-| SEO Specialist | Adds search optimization |
-
-In this demo, each of those roles is an AI agent!
+Instead of relying on a single LLM prompt, the system uses a **coordinated agent pipeline** where each agent focuses on a specific responsibility, resulting in higher quality and more structured outputs.
 
 ---
 
-## 🔄 How LangGraph Works
+# 🧠 Project Overview
 
-LangGraph uses three core concepts:
+The system simulates a **real-world content production pipeline** using AI agents.
 
-| Concept | What it is | Real-life analogy |
-|---------|-----------|-------------------|
-| **State** | Shared data object passed between agents | A form being filled out by multiple people |
-| **Node** | An individual agent (Python function) | A worker at a station on an assembly line |
-| **Edge** | A connection between two nodes | The conveyor belt between stations |
+Each agent performs a specialized role:
 
-### Workflow Diagram
+| Agent | Responsibility |
+|------|----------------|
+| **Planner Agent** | Generates a structured outline from the topic |
+| **Writer Agent** | Expands the outline into a draft blog |
+| **Editor Agent** | Refines the draft for clarity and readability |
+| **SEO Agent** | Generates an SEO title and meta description |
+
+These agents collaborate through a **shared state managed by LangGraph**, enabling a structured and deterministic AI workflow.
+
+---
+
+# 🏗 Architecture
+
+The system is implemented using **LangGraph's StateGraph architecture**, where agents operate as nodes connected through directed edges.
+
+Key components:
+
+| Component | Description |
+|-----------|-------------|
+| **State** | Shared data object passed between agents |
+| **Nodes** | Individual AI agents implemented as Python functions |
+| **Edges** | Connections defining the workflow order |
+
+### Workflow Pipeline
 
 ```
 START
@@ -57,6 +57,8 @@ START
   ▼
 END
 ```
+
+This design demonstrates how **LLM-powered agents can be composed into modular pipelines for real-world AI applications.**
 
 ---
 
@@ -89,29 +91,40 @@ agentic_demo/
 
 ---
 
-## ⚡ Quick Start (3 Steps)
 
-### Step 1: Install Dependencies
+---
+
+# ⚡ Installation
+
+### Step 1 :Clone the repository:
+
+```bash
+git clone https://github.com/DhruvShah510/Multi-Agent-AI-Blog-Generation-SEO-Optimization-System.git
+cd Multi-Agent-AI-Blog-Generation-SEO-Optimization-System
+```
+
+### Step 2: Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Step 2: Set Up Your API Key
+### Step 3: Set Up Your API Key
 
 ```bash
 # Copy the example file
 cp .env.example .env
 
 # Open .env and add your key:
-# OPENAI_API_KEY=sk-...   (get free key at platform.openai.com)
+#GROQ_API_KEY = gsk-...   (get your free api key from groq api key platform)
+# OPENAI_API_KEY=sk-...   (get paid key)
 # OR
-# ANTHROPIC_API_KEY=sk-... (get free key at console.anthropic.com)
+# ANTHROPIC_API_KEY=sk-... (get paid key)
 ```
 
 > **Note:** You only need ONE key. The system will automatically pick the right model.
 
-### Step 3: Run the Streamlit App
+### Step 4: Run the Streamlit App
 
 ```bash
 streamlit run app/streamlit_app.py
@@ -159,39 +172,54 @@ python run_demo.py --diagram
 
 ---
 
-## 💰 Cost Optimization
+### 🤖 Key Features
+- Multi-agent AI workflow using LangGraph
+- Modular agent-based architecture
+- Automated blog generation pipeline
+- SEO metadata generation (title + description)
+- Shared state management between agents
+- Streamlit UI for interactive blog generation
+- Terminal mode for quick testing
+---
 
-This demo is designed for **free tier API keys**:
-
-| Model | Provider | Cost (approximate) |
-|-------|----------|-------------------|
-| `gpt-4o-mini` | OpenAI | ~$0.001 per blog |
-| `claude-3-haiku` | Anthropic | ~$0.002 per blog |
-
-Each run generates a blog of ~200-250 words using ~500-800 total tokens.
+### 💡 Key Technologies
+- LangGraph
+- LangChain
+- OpenAI / Anthropic LLMs
+- Python
+- Streamlit
+- Pydantic
 
 ---
 
-## 🔑 Key LangGraph Concepts Demonstrated
+###📊 Concepts Demonstrated
 
-1. **StateGraph** — The main graph class that holds all nodes and edges
-2. **TypedDict State** — A typed Python dict that defines the shared state schema
-3. **Node functions** — Python functions that accept state and return partial updates
-4. **Sequential edges** — Simple linear pipeline (no branching in this demo)
-5. **START / END** — Special LangGraph constants for workflow entry and exit points
-6. **graph.compile()** — Validates and builds the runnable workflow object
-7. **graph.invoke()** — Executes the full workflow and returns the final state
+This project demonstrates several important GenAI system design concepts:
+- Agentic AI workflows
+- Multi-agent orchestration
+- State-based AI pipelines
+- LLM prompt structuring
+- Modular AI system design
 
----
+### Author 
+Dhruv Shah
 
-## 📚 Learn More
-
-- [LangGraph Documentation](https://langchain-ai.github.io/langgraph/)
-- [LangGraph Tutorials](https://langchain-ai.github.io/langgraph/tutorials/)
-- [LangChain Documentation](https://python.langchain.com/)
-- [OpenAI API Keys](https://platform.openai.com/api-keys)
-- [Anthropic API Keys](https://console.anthropic.com/)
+M.Tech – Computer Science & Engineering
+Sardar Vallabhbhai National Institute of Technology (SVNIT)
 
 ---
 
-*Built as a teaching/demo project to explain Agentic AI concepts to teams new to LLMs.*
+### Contact 
+LinkedIn
+https://www.linkedin.com/in/dhruv-shah-25997624b
+
+Email
+dhruv.shahcs008@gmail.com
+
+---
+
+### ⭐ If you found this project interesting
+
+Consider giving the repository a star ⭐
+
+---
