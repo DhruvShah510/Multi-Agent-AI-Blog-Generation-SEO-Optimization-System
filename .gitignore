@@ -1,0 +1,8 @@
+#virtual env
+agenticblog/
+
+# env files 
+.env
+
+# document for reference of the team
+PROJECT_EXPLAINED.md
