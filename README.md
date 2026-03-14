@@ -62,6 +62,64 @@ This design demonstrates how **LLM-powered agents can be composed into modular p
 
 ---
 
+### 🤖 Key Features
+- Multi-agent AI workflow using LangGraph
+- Modular agent-based architecture
+- Automated blog generation pipeline
+- SEO metadata generation (title + description)
+- Shared state management between agents
+- Streamlit UI for interactive blog generation
+- Terminal mode for quick testing
+
+---
+
+---
+
+## 🤖 Agents Explained
+
+### Agent 1: Content Planner
+- **Input:** topic (from user)
+- **Output:** `outline` — a 3–5 section blog structure
+- **Like:** A journalist outlining their article before writing
+
+### Agent 2: Writer
+- **Input:** topic + outline
+- **Output:** `draft_blog` — a short 3–5 paragraph blog post
+- **Like:** A journalist writing the first draft
+
+### Agent 3: Editor
+- **Input:** draft_blog
+- **Output:** `edited_blog` — polished, grammar-corrected version
+- **Like:** A copy editor refining the journalist's draft
+
+### Agent 4: SEO Optimizer
+- **Input:** edited_blog
+- **Output:** `seo_title` (max 60 chars) + `meta_description` (max 150 chars)
+- **Like:** An SEO specialist writing the Google search snippet
+
+---
+
+## ⚙️ Tech Stack & Concepts
+
+### Technologies Used
+- LangGraph
+- LangChain
+- OpenAI / Anthropic LLMs
+- Python
+- Streamlit
+- Pydantic
+
+### GenAI Concepts Demonstrated
+This project showcases several important Generative AI system design patterns:
+
+- Agentic AI workflows
+- Multi-agent orchestration
+- State-based LLM pipelines
+- Prompt-driven agent collaboration
+- Modular AI system design
+
+---
+
 ## 📁 Project Structure
 
 ```
@@ -91,8 +149,6 @@ agentic_demo/
 
 ---
 
-
----
 
 # ⚡ Installation
 
@@ -147,59 +203,6 @@ python run_demo.py --diagram
 ```
 
 ---
-
-## 🤖 Agents Explained
-
-### Agent 1: Content Planner
-- **Input:** topic (from user)
-- **Output:** `outline` — a 3–5 section blog structure
-- **Like:** A journalist outlining their article before writing
-
-### Agent 2: Writer
-- **Input:** topic + outline
-- **Output:** `draft_blog` — a short 3–5 paragraph blog post
-- **Like:** A journalist writing the first draft
-
-### Agent 3: Editor
-- **Input:** draft_blog
-- **Output:** `edited_blog` — polished, grammar-corrected version
-- **Like:** A copy editor refining the journalist's draft
-
-### Agent 4: SEO Optimizer
-- **Input:** edited_blog
-- **Output:** `seo_title` (max 60 chars) + `meta_description` (max 150 chars)
-- **Like:** An SEO specialist writing the Google search snippet
-
----
-
-### 🤖 Key Features
-- Multi-agent AI workflow using LangGraph
-- Modular agent-based architecture
-- Automated blog generation pipeline
-- SEO metadata generation (title + description)
-- Shared state management between agents
-- Streamlit UI for interactive blog generation
-- Terminal mode for quick testing
----
-
-### 💡 Key Technologies
-- LangGraph
-- LangChain
-- OpenAI / Anthropic LLMs
-- Python
-- Streamlit
-- Pydantic
-
----
-
-###📊 Concepts Demonstrated
-
-This project demonstrates several important GenAI system design concepts:
-- Agentic AI workflows
-- Multi-agent orchestration
-- State-based AI pipelines
-- LLM prompt structuring
-- Modular AI system design
 
 ### Author 
 Dhruv Shah
