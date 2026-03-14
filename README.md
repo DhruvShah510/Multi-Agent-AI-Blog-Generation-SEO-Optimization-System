@@ -62,7 +62,7 @@ This design demonstrates how **LLM-powered agents can be composed into modular p
 
 ---
 
-### 🤖 Key Features
+### ⚡ Key Features
 - Multi-agent AI workflow using LangGraph
 - Modular agent-based architecture
 - Automated blog generation pipeline
@@ -70,8 +70,6 @@ This design demonstrates how **LLM-powered agents can be composed into modular p
 - Shared state management between agents
 - Streamlit UI for interactive blog generation
 - Terminal mode for quick testing
-
----
 
 ---
 
