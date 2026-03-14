@@ -8,7 +8,7 @@ Instead of relying on a single LLM prompt, the system uses a **coordinated agent
 
 ---
 
-# 🧠 Project Overview
+## 🧠 Project Overview
 
 The system simulates a **real-world content production pipeline** using AI agents.
 
@@ -25,7 +25,7 @@ These agents collaborate through a **shared state managed by LangGraph**, enabli
 
 ---
 
-# 🏗 Architecture
+## 🏗 Architecture
 
 The system is implemented using **LangGraph's StateGraph architecture**, where agents operate as nodes connected through directed edges.
 
@@ -62,7 +62,8 @@ This design demonstrates how **LLM-powered agents can be composed into modular p
 
 ---
 
-### ⚡ Key Features
+## ⚡ Key Features
+
 - Multi-agent AI workflow using LangGraph
 - Modular agent-based architecture
 - Automated blog generation pipeline
@@ -148,7 +149,7 @@ agentic_demo/
 ---
 
 
-# ⚡ Installation
+## ⚡ Installation
 
 ### Step 1 :Clone the repository:
 
@@ -202,7 +203,8 @@ python run_demo.py --diagram
 
 ---
 
-### Author 
+## Author 
+
 Dhruv Shah
 
 M.Tech – Computer Science & Engineering
@@ -210,7 +212,8 @@ Sardar Vallabhbhai National Institute of Technology (SVNIT)
 
 ---
 
-### Contact 
+## Contact 
+
 LinkedIn
 https://www.linkedin.com/in/dhruv-shah-25997624b
 
